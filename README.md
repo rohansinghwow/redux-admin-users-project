@@ -1,7 +1,7 @@
 ## How to run this project
 
 Step 1 :
-Type below command and wait for installation.
+Type below command and wait for installation. (or use npm equivalent commands)
 
 ```
 yarn
