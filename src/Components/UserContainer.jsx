@@ -21,7 +21,7 @@ import {
   setIsLogin,
   setAdmin,
   setPassword,
-} from "../Redux/features/todoSlice";
+} from "../Redux/features/userSlice";
 import UserModal from "./UserModal";
 export default function UserContainer({ isAdmin, currentUser }) {
   const { allUsers, user, showModal, isEditing } = useSelector(

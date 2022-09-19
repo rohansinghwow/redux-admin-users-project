@@ -24,7 +24,7 @@ import {
   setShowModal,
   setPassword,
   setAdmin,
-} from "../Redux/features/todoSlice";
+} from "../Redux/features/userSlice";
 export default function UserModal({ submitHandler }) {
   const [open, setOpen] = React.useState(false);
   const dispatch = useDispatch();

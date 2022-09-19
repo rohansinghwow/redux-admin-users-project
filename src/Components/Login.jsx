@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import UserContainer from "./UserContainer";
-import { setIsAdmin, setIsLogin } from "../Redux/features/todoSlice";
+import { setIsAdmin, setIsLogin } from "../Redux/features/userSlice";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";

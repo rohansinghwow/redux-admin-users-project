@@ -39,8 +39,8 @@ const initialState = {
 
 }
 
-export const todoSlice = createSlice({
-    name: 'todoSlice',
+export const userSlice = createSlice({
+    name: 'userSlice',
     initialState,
     reducers: {
         addTodos: (state, action) => {
@@ -87,6 +87,6 @@ export const todoSlice = createSlice({
 
 })
 
-export const { addTodos, removeTodo, setShowModal, setName, setUserName, editTodo, setIsEditing, setIsAdmin, setIsLogin, setAdmin, setPassword } = todoSlice.actions
+export const { addTodos, removeTodo, setShowModal, setName, setUserName, editTodo, setIsEditing, setIsAdmin, setIsLogin, setAdmin, setPassword } = userSlice.actions
 
-export default todoSlice.reducer;
+export default userSlice.reducer;
