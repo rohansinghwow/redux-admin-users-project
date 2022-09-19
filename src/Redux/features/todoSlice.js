@@ -32,7 +32,7 @@ const initialState = {
     },
 
     showModal: false,
-    isAdmin: false,
+
     isEditing: false,
     isLogin: false,
 

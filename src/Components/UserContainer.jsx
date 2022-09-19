@@ -81,11 +81,14 @@ export default function UserContainer({ isAdmin, currentUser }) {
             <Button variant="contained" onClick={handleAdd} size="small">
               Add A User
             </Button>
-            <Button href="/" onClick={() => dispatch(setIsLogin(false))}>
-              Log Out
-            </Button>
           </p>
         )}
+        <p>
+          <Button href="/" onClick={() => dispatch(setIsLogin(false))}>
+            Log Out
+          </Button>
+        </p>
+
         <TextField
           value={search}
           onChange={handleSearch}

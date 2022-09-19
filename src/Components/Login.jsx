@@ -5,16 +5,15 @@ import { setIsAdmin, setIsLogin } from "../Redux/features/todoSlice";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
+
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Input from "@mui/material/Input";
 
 const Login = () => {
   const dispatch = useDispatch();
-  const { isAdmin, creds, allUsers, isLogin } = useSelector(
-    (state) => state.todoHandle
-  );
+  const { creds, allUsers, isLogin } = useSelector((state) => state.todoHandle);
+  const [isAdmin, setIsAdmin] = React.useState(false);
   const [formData, setFormData] = React.useState({
     username: "",
     password: "",
@@ -29,9 +28,9 @@ const Login = () => {
           formData.username === user.username &&
           formData.password === user.password
         ) {
-          dispatch(setIsAdmin(true));
           dispatch(setIsLogin(true));
           setCurrentUser(user.name);
+          setIsAdmin(true);
         }
       } else if (
         formData.username === user.username &&
