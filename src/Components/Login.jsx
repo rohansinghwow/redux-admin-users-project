@@ -79,9 +79,9 @@ const Login = () => {
               />
             </CardContent>
             <CardActions>
-              <Button size="small">
-                <button>Login</button>
-              </Button>
+              <Typography gutterBottom variant="h5" component="div">
+                <Button type="submit">Submit</Button>
+              </Typography>
             </CardActions>
           </Card>
         )}

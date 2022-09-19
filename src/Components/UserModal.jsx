@@ -44,7 +44,10 @@ export default function UserModal({ submitHandler }) {
           <form onSubmit={submitHandler}>
             <Box sx={style}>
               <h3>
-                <Button onClick={() => dispatch(setShowModal(false))}>
+                <Button
+                  variant="outlined"
+                  onClick={() => dispatch(setShowModal(false))}
+                >
                   Close
                 </Button>
               </h3>
@@ -79,8 +82,8 @@ export default function UserModal({ submitHandler }) {
                 <MenuItem value={false}>Not an Admin</MenuItem>
               </Select>
               <p>
-                <Button>
-                  <button>Submit</button>
+                <Button type="submit" variant="contained">
+                  Submit
                 </Button>
               </p>
             </Box>
