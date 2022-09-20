@@ -25,7 +25,7 @@ import {
   setPassword,
   setAdmin,
 } from "../Redux/features/userSlice";
-export default function UserModal({ submitHandler }) {
+export default function UserModal({ submitHandler, isAdmin }) {
   const [open, setOpen] = React.useState(false);
   const dispatch = useDispatch();
   const handleOpen = () => setOpen(true);
@@ -69,18 +69,22 @@ export default function UserModal({ submitHandler }) {
                 value={user.password}
               />
 
-              <p>Admin:</p>
+              {isAdmin && (
+                <>
+                  <p>Admin:</p>
+                  <Select
+                    labelId="Admin"
+                    id="demo-simple-select"
+                    label="Age"
+                    onChange={(e) => dispatch(setAdmin(e.target.value))}
+                    value={user.admin}
+                  >
+                    <MenuItem value={true}>Admin</MenuItem>
+                    <MenuItem value={false}>Not an Admin</MenuItem>
+                  </Select>
+                </>
+              )}
 
-              <Select
-                labelId="Admin"
-                id="demo-simple-select"
-                label="Age"
-                onChange={(e) => dispatch(setAdmin(e.target.value))}
-                value={user.admin}
-              >
-                <MenuItem value={true}>Admin</MenuItem>
-                <MenuItem value={false}>Not an Admin</MenuItem>
-              </Select>
               <p>
                 <Button type="submit" variant="contained">
                   Submit

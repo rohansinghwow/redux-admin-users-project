@@ -72,7 +72,7 @@ export default function UserContainer({ isAdmin, currentUser }) {
 
   return (
     <Table sx={{ width: 650, margin: "0 auto" }} aria-label="simple table">
-      <UserModal submitHandler={submitHandler} />
+      <UserModal isAdmin={isAdmin} submitHandler={submitHandler} />
 
       <TableHead>
         <h1>Welcome {currentUser}</h1>
