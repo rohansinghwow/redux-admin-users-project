@@ -43,13 +43,13 @@ export const userSlice = createSlice({
     name: 'userSlice',
     initialState,
     reducers: {
-        addTodos: (state, action) => {
+        addUsers: (state, action) => {
             state.allUsers = [...state.allUsers, action.payload]
         },
-        removeTodo: (state, action) => {
+        removeUser: (state, action) => {
             state.allUsers = state.allUsers.filter((item, index) => index !== action.payload)
         },
-        editTodo: (state, action) => {
+        editUser: (state, action) => {
             state.allUsers = state.allUsers.map((item, index) => {
                 if (index === action.payload) {
                     return state.user
@@ -87,6 +87,6 @@ export const userSlice = createSlice({
 
 })
 
-export const { addTodos, removeTodo, setShowModal, setName, setUserName, editTodo, setIsEditing, setIsAdmin, setIsLogin, setAdmin, setPassword } = userSlice.actions
+export const { addUsers, removeUser, setShowModal, setName, setUserName, editUser, setIsEditing, setIsAdmin, setIsLogin, setAdmin, setPassword } = userSlice.actions
 
 export default userSlice.reducer;

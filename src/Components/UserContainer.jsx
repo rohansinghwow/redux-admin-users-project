@@ -10,12 +10,12 @@ import Button from "@mui/material/Button";
 
 import { useDispatch, useSelector } from "react-redux";
 import {
-  addTodos,
-  removeTodo,
+  addUsers,
+  removeUser,
   setShowModal,
   setName,
   setUserName,
-  editTodo,
+  editUser,
   setIsEditing,
   setIsAdmin,
   setIsLogin,
@@ -37,11 +37,11 @@ export default function UserContainer({ isAdmin, currentUser }) {
       dispatch(setShowModal(false));
       return;
     } else if (isEditing) {
-      dispatch(editTodo(editID));
+      dispatch(editUser(editID));
       dispatch(setShowModal(false));
       return;
     } else {
-      dispatch(addTodos(user));
+      dispatch(addUsers(user));
       dispatch(setShowModal(false));
     }
   }
@@ -63,7 +63,7 @@ export default function UserContainer({ isAdmin, currentUser }) {
   }
 
   function handleDelete(idx) {
-    dispatch(removeTodo(idx));
+    dispatch(removeUser(idx));
   }
 
   function handleSearch(e) {
